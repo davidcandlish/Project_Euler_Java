@@ -14,5 +14,13 @@ public class TestHelper {
         assertFalse(helper.PrimeCheck(b));
         int c = 2;
         assertTrue(helper.PrimeCheck(c));
+
+    }
+    @Test
+    public void testSumSquares() {
+        int a =0;
+        int b = 10;
+        // todo test how I pass floats
+
     }
 }
