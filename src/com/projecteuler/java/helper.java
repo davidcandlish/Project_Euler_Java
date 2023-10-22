@@ -1,7 +1,5 @@
 package com.projecteuler.java;
 
-import java.io.*;
-import java.math.*;
 
 
 public abstract class helper {
@@ -27,6 +25,25 @@ public abstract class helper {
         return true;
     }
 
+    public static boolean PrimeCheck(long num) {
+        if (num ==2){
+            return true;
+        } else {
+            if (num <= 1 || num % 2 == 0) {
+                return false;
+            }
+            long topLimit = (int) Math.sqrt(num);
+            for (long i = 3; i <= topLimit; i += 2) {
+                if (num % i == 0) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+
     public static int sumSquares(int num) {
         // TODO Think if I need to refactor this to long
         // For loop to iterate integers to the integer passed in, square them and add to running total
@@ -41,7 +58,7 @@ public abstract class helper {
 
     public static int squareSums(int num) {
         // sum of integers is s = (n(a+1))/2
-        // todo what about overloaded constructor to allow passing in start/end terms
+
 
         return (int) Math.pow(((num*(num+1))/2),2);
 
